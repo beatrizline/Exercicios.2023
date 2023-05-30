@@ -1,0 +1,8 @@
+# Escreva um programa que leia três números inteiros nas variáveis “a”, “b” e “c” e escreva a média deles: (a + b + c) / 3.
+
+variavel_a = int(input(""))
+variavel_b = int(input(""))
+variavel_c = int(input(""))
+media = variavel_a + variavel_b + variavel_c
+final = media / 3
+print(f'{final:.2f}')
