@@ -1,0 +1,17 @@
+# Escreva um programa que leia um número e mostra o valor booleano True (verdadeiro) se o número for ímpar ou
+# o valor booleano False (falso) caso contrário
+
+def numero(n):
+    return n % 2 == 0
+
+def main():
+    numeracao = int(input())
+    resultado = numero(numeracao)
+
+    if resultado:
+        print('False')
+    else:
+        print('True')
+
+if __name__ == '__main__':
+    main()
