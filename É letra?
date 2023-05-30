@@ -1,0 +1,13 @@
+# Escreva um programa que leia um caractere e mostra o valor booleano True (verdadeiro) se for uma letra (vogal ou consoante) ou o valor booleano False (falso) caso contrário.
+
+import string
+
+def caracter (c):
+    return c in list(string.ascii_letters)
+
+c = str(input())
+c = caracter(c)
+if c:
+    print(True)
+else:
+    print(False)
