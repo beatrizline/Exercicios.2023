@@ -1,0 +1,29 @@
+# Escreva um programa/algoritmo que leia 5 (cinco) números inteiros e escreva na tela:
+
+    # o maior número lido;
+    # o menor número lido;
+    # a média aritmétic
+    
+def numero1(n1):
+    return n1
+
+def numero2(n2):
+    return n2
+
+def numero3(n3):
+    return n3
+
+def numero4(n4):
+    return n4
+
+def numero5(n5):
+    return n5
+
+n1 = int(input())
+n2 = int(input())
+n3 = int(input())
+n4 = int(input())
+n5 = int(input())
+total = n1, n2, n3, n4, n5
+media_aritmetica = (n1+n2+n3+n4+n5) / 5
+print(max(total), min(total), media_aritmetica, sep= '\n')
