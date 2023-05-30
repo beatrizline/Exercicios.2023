@@ -1,0 +1,11 @@
+# Escreva um programa que leia um caractere e mostra o valor booleano True (verdadeiro) se for uma consoante ou o valor booleano False (falso) caso contrário.
+
+def caracter (c):
+    return c in "b,c,d,f,g,h,j,k,l,m,n,p,q,r,s,t,u,v,x,z,B,C,D,F,G,H,J,K,L,M,N,P,Q,R,S,T,V,X,Z "
+
+c = str(input())
+c = caracter(c)
+if c:
+    print(True)
+else:
+    print(False)
