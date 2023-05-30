@@ -1,0 +1,7 @@
+# Escreva um programa que mostre na tela as mensagens: Alô, mundo! ALO MUNDO alô, mundo. ALo munDO Alô, Mundo!
+
+print("Alo, mundo!")
+print("ALO MUNDO")
+print("alo, mundo.")
+print("ALo munDO")
+print("Alo, Mundo!")
