@@ -1,0 +1,19 @@
+# Escreva um programa que ler três valores inteiros (a, b, e c). Calcule o mostre o resultado da função:
+
+# def calcular(a,b,c):
+   # return 2*a+5*b-c
+
+def calcular (a, b, c):
+    t = 2 * a + 5 * b - c
+    return t
+
+def main ():
+    a = int(input())
+    b = int(input())
+    c = int(input())
+
+    t = calcular(a,b,c)
+    print(t)
+
+if __name__ == '__main__':
+    main()
