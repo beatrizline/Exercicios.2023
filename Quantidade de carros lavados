@@ -1,0 +1,4 @@
+print(8 * 2)
+print("calculo referente a quantidade de carros lavados: ")
+print(" 12 * 12,50 ")
+print ( 12* 12.50)
