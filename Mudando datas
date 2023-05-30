@@ -1,0 +1,7 @@
+print("calculo quanto anos eu terei em 2025?")
+print("2025 - 2002, igual a: ")
+print(2025 - 2002)
+
+print("\ncalculo quanto anos / desafio?")
+print("2023 - 2050, igual a: ")
+print(2050 - 2023)
