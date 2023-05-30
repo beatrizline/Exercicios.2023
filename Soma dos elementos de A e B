@@ -1,0 +1,22 @@
+# Dadas duas listas A e B contendo 20 elementos inteiros cada, gerar e exibir uma lista C 
+# do mesmo tamanho cujos elementos sejam a soma dos respectivos elementos de A e B.
+
+a = []
+b = []
+c = []
+
+for i in range(20):
+    a.append(int(input()))
+
+for i in range(20):
+    b.append(int(input()))
+
+for i in range(20):
+    c.append(a[i]+b[i])
+
+
+print(a)
+print(b)
+print(c)
+
+
