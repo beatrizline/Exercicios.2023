@@ -1,0 +1,21 @@
+# Escreva um programa que leia dois valores e mostre na tela, nessa ordem: a. A soma dos números; b. A concatenação das strings; c. A multiplicação dos números; d. A multiplicação como strings; e. A divisão dos números; f. A exponenciação; g. O módulo (resto).
+
+a = input()
+b = input()
+#letra_a
+print (float(a) + float(b))
+#letra_b
+print(f'{float(a):.1f}' + b)
+#letra_c
+print(float(a) * float(b))
+#letra_d
+multi_str = f'{float(a):.1f}' * int(b)
+print(multi_str)
+#letra_e
+print(float(a) / float(b))
+#letra_f divisao inteira
+print(float(a) // float(b))
+#letra_g
+print(float(a) ** float(b))
+#letra_h
+print(float(a) % float(b))
