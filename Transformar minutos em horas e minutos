@@ -1,0 +1,6 @@
+# Escreva um programa que leia uma quantidade de minutos e mostre a quantidade de horas e minutos equivalente.
+
+minutos = int(input(""))
+h = minutos // 60
+m = minutos % 60
+print(f'{h}h{m}min')
