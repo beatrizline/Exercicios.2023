@@ -1,0 +1,7 @@
+# Escreva um programa que leia um caractere e mostra o valor booleano True (verdadeiro) se for uma letra (vogal ou consoante) ou um dígito (entre ‘0’ e ‘9’) ou valor booleano False (falso) caso contrário.
+
+def caractere(c):
+    return c
+
+c = str(input())
+print(c.isalnum())
