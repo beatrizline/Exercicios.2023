@@ -1,0 +1,5 @@
+# Escreva um programa que leia separadamente seu nome e o seu sobrenome e mostre na tela o nome completo.
+
+nome_1 = input("").strip()
+sobrenome = input("").strip()
+print(f'{nome_1} {sobrenome}')
