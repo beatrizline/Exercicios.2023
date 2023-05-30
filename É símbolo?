@@ -1,0 +1,10 @@
+# Escreva um programa que leia um caractere e mostra o valor booleano True (verdadeiro) se for um SÍMBOLO (o que não é letra ou número) ou o valor booleano False (falso) caso contrário.
+
+def caractere(c):
+    return c
+
+c = str(input())
+if c.isalnum():
+    print(False)
+else:
+    print(True)
