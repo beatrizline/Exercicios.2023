@@ -1,0 +1,14 @@
+print("Meu animal favorito e um gato:")
+print("^^")
+print("0___")
+print("  |||\n")
+print("Eu moro em Teresina-PI\n")
+print('''
+           
+ _|_        ___
+|   |      /   \_________
+|#  | __   _____        |
+|   |  |   |   |        |
+|  #|  |   --------------
+|   |  |
+''')v
