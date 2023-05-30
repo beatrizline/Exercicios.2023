@@ -1,0 +1,9 @@
+# Leia um número inteiro entre 1000 e 9999 e mostre o número na ordem inversa. Por exemplo, se o número lido for 5678 deverá ser mostrado 8765.
+
+def numero1 (n):
+    return n
+
+n = str(input())
+numero_inverso = numero1(n)
+
+print(numero_inverso[::-1])
