@@ -1,0 +1,6 @@
+print("\nDescubra quantos anos tera em 2025. Em que ano voce nasceu? ")
+nascimento = input()
+nascimento = int(nascimento)
+print("Em 2025 vocẽ terá", 2025 - nascimento, "anos!\n")
+#input() recebe um número digitado no teclado
+#e o guarda em uma váriavel chamada nascimento
