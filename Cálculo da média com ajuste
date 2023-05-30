@@ -1,0 +1,22 @@
+# Escreva um programa que leia três números inteiros correspondentes a três notas de um aluno. Apresente a média
+# das três notas, mas, se a terceira nota for superior a 8, o aluno deve ganhar mais um ponto na média. Além disso,
+# se a média final, em função do ponto extra, ficar acima de 10 ela deve ser ajustada para 10.
+
+def ajuste_de_media(n1,n2,n3):
+   media = (n1 + n2 + n3) / 3
+   if n3 > 8:
+       media = media + 1
+   if media > 10:
+       media = 10
+   return media
+
+def main():
+   not1 = int(input())
+   not2 = int(input())
+   not3 = int(input())
+
+   resultado = ajuste_de_media(not1, not2, not3)
+   print(f'{resultado:.2f}')
+
+if __name__ == '__main__':
+   main()
