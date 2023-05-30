@@ -1,0 +1,13 @@
+# Escreva um programa que leia uma determinada quantidade de minutos e informe essa quantidade convertidade para horas e minutos. Por exemplo, 220 minutos é equivalente 3 horas e 40 minutos.
+
+def conv_horas (m):
+    return m // 60
+
+def conv_minutos (m):
+    return m % 60
+
+m = int(input())
+
+min = conv_minutos(m)
+h = conv_horas(m)
+print(f'{h}:{min}')
