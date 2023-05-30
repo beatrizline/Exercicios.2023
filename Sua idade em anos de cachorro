@@ -1,0 +1,6 @@
+#sua idade em ano de cachorro
+print("Agora vamos calcular quantos anos você possui em anos de cachorro!\n")
+print("Quantos anos vocẽ tem? ")
+idade = input()
+idade = int(idade)
+print("Você teria", idade * 7,"se você fosse um cachorro!")
