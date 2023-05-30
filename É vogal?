@@ -1,0 +1,11 @@
+# Escreva um programa que leia um caractere e mostra o valor booleano True (verdadeiro) se for uma vogal ou o valor booleano False (falso) caso contrário.
+
+def caracter (c):
+    return c in "a, e, i, o, u, A, E, I, O, U"
+
+c = str(input())
+c = caracter(c)
+if c:
+    print(True)
+else:
+    print(False)
