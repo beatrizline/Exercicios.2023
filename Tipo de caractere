@@ -1,0 +1,21 @@
+# Escreva um programa que leia um caractere e mostra uma das mensagens: “vogal”, “consoante”, “número” ou
+# “símbolo”. Observação: O cedilha “ç”, caracteres acentuados, espaço em branco e outros como “símbolo”.
+
+def caractere_string(c):
+       if c in 'aAeEiIoOuU':
+           return 'vogal'
+       elif c in 'bBcCdDfFgGhHjJkKlLmMnNpPqQrRsStTvVwWxXyYzZ':
+           return 'consoante'
+       elif c in '0123456789':
+           return 'número'
+       else:
+           return 'símbolo'
+
+def main():
+   caractere = input()
+   resultado = caractere_string(caractere)
+
+   print(f'{resultado}')
+
+if __name__ == '__main__':
+   main()
