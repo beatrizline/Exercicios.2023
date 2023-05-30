@@ -1,0 +1,9 @@
+# Escreva um programa que leia um único caractere pelo teclado e informe o código numérico correspondente ao caractere lido.
+
+def caractere(c):
+   return c
+
+c = str(input())
+while len(c) != 1:
+   c = input()
+print(ord(c))
