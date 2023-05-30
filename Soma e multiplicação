@@ -1,0 +1,6 @@
+numero_1 = float(input(""))
+numero_2 = float(input(""))
+numero_3 = numero_1 + numero_2
+numero_4 = numero_1 * numero_2
+print(f'{numero_3}')
+print(f'{numero_4}')
