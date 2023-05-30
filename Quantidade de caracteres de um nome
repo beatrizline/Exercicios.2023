@@ -1,0 +1,8 @@
+# Escreva um programa que leia um nome pelo teclado e informe quantos caracteres o nome possui.
+
+def caracteres (c):
+   return (c)
+
+c = str(input())
+x = caracteres(c)
+print(len(c))
