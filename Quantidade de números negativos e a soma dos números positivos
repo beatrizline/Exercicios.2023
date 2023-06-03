@@ -1,0 +1,21 @@
+# Escreva um programa que leia uma lista com 10 números reais, calcule e mostre:
+# a lista, a quantidade de números negativos e a soma dos números positivos dessa lista.
+
+lista = []
+variavel = 0
+soma = 0
+
+for i in range(10):
+    x = int(input())
+    lista.append(x)
+print(lista)
+
+for negativo in lista:
+    if negativo < 0:
+        variavel += 1
+print(variavel)
+
+for positivo in lista:
+    if positivo > 0:
+        soma += positivo
+print(soma)
