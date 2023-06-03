@@ -1,0 +1,35 @@
+# Foram anotados nomes, idades e alturas de 30 alunos.
+# Faça um programa que determine quais alunos com mais de 13 anos possuem altura inferior à média de altura dos alunos.
+
+def ler_alunos():
+    alunos = []
+    for i in range(30):
+        nome = input()
+        idade = int(input())
+        altura = float(input())
+        alunos.append((nome, idade, altura))
+    return alunos
+
+def media_h(alunos):
+    soma = 0
+    for aluno in alunos:
+        soma += aluno[2]
+    media = round(soma / len(alunos), 2)
+    return media
+
+def inferior_media(alunos, media):
+    nome_abaixo_media = []
+    for aluno in alunos:
+        if aluno[1] > 13 and aluno[2] < media:
+            nome_abaixo_media.append(aluno[0])
+    return nome_abaixo_media
+
+alunos = ler_alunos()
+
+media = media_h(alunos)
+
+alunos_media_idade = inferior_media(alunos, media)
+
+print('MAIORES DE 13 ANOS COM ALTURA ABAIXO DA MÉDIA')
+for aluno in alunos_media_idade:
+    print(aluno)
