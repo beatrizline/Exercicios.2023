@@ -1,0 +1,22 @@
+# Escreva um programa que leia uma lista com 20 números inteiros.
+# Escreva os elementos da lista eliminando elementos repetidos.
+
+def eliminar_repetidos(lista):
+    elementos_unicos = []
+    for elemento in lista:
+        if elemento not in elementos_unicos:
+            elementos_unicos.append(elemento)
+    print(elementos_unicos)
+
+def main():
+    lista = []
+
+    # Ler os números inteiros
+    for i in range(20):
+        numero = int(input())
+        lista.append(numero)
+
+    eliminar_repetidos(lista)
+
+if __name__ == "__main__":
+    main()
