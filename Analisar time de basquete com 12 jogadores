@@ -1,0 +1,56 @@
+# Um time de basquete possui 12 jogadores. Deseja-se um programa que, dado o nome e a altura dos jogadores, determine: 
+# a. o nome e a altura do jogador mais alto; 
+# b. a média de altura do time; 
+# c. os jogadores com altura superior à média, listando o nome e a altura de cada um.
+
+def letra_a(jogadores):
+    mais_alto = jogadores[0]
+
+    for aluno in jogadores:
+        if aluno["altura"] > mais_alto["altura"]:
+            mais_alto = aluno
+    return mais_alto
+
+def letra_b(jogadores):
+    altura_t = sum(jogador["altura"] for jogador in jogadores)
+    media_altura = altura_t / len(jogadores)
+
+    jogadores_altos = []
+    for jogador in jogadores:
+        if jogador["altura"] > media_altura:
+            jogadores_altos.append(jogador)
+    return jogadores_altos
+
+def media(altura):
+    soma = 0
+
+    for i in altura:
+        soma += i
+
+    return f'ALTURA MÉDIA DO TIME\n{soma/12:.2f}'
+
+def main():
+    jogadores = []
+    altura = []
+
+    for i in range(12):
+        x = input()
+        y = float(input())
+        jogador = {"nome": x,"altura": y}
+        jogadores.append((jogador))
+        altura.append(y)
+
+    altos = letra_b(jogadores)
+    mais_alto = letra_a(jogadores)
+    print("JOGADOR MAIS ALTO DO TIME")
+    print(f"{mais_alto['nome']}\n{mais_alto['altura']:.2f}")
+    resultado_media = media(altura)
+    print(resultado_media)
+    print("JOGADORES MAIS ALTOS QUE A MÉDIA DO TIME")
+    for jogador in altos:
+        print(f"{jogador['nome']}\n{jogador['altura']:.2f}")
+
+if __name__ == '__main__':
+    main()
+
+
