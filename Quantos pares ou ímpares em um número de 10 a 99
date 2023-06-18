@@ -1,0 +1,25 @@
+# Escreva um programa que leia um número inteiro entre 10 e 99, mostre uma das mensagens, a seguir, conforme o número lido.
+
+#    Nenhum dígito é ímpar.
+#    Apenas um dígito é ímpar.
+#    Os dois dígitos são ímpares.
+
+def quantidade_num_par(num):
+   u = num // 1 % 10
+   d = num // 10 % 10
+   unidade = u
+   dezena = d
+   if unidade % 2 != 0 and dezena % 2 != 0:
+       return 'Os dois dígitos são ímpares.'
+   if unidade % 2 == 0 and dezena % 2 == 0:
+       return 'Nenhum dígito é ímpar.'
+   if unidade % 2 != 0 or dezena % 2 != 0:
+       return 'Apenas um dígito é ímpar.'
+       
+def main():
+   numero_int = int(input())
+   resultado = quantidade_num_par(numero_int)
+   print(resultado)
+   
+if __name__ == '__main__':
+   main()
