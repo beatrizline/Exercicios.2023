@@ -1,0 +1,24 @@
+# Escreva um programa que leia o nome e o estado civil de uma pessoa, considere apenas “1” para casado e “2” para solteiro.
+# Se a pessoa for casada, leia, também, o nome do cônjuge.
+# Mostre quantos caracteres no total existem no(s) nome(s) lido(s).
+
+def estado_civil(ec):
+    if ec == 1:
+        return 'casado'
+    if ec == 2:
+        return 'solteiro'
+
+def main():
+    nome = input().strip()
+    variavel_ec = int(input())
+    resultado = estado_civil(variavel_ec)
+
+    if resultado == 'casado':
+        conjuge = input().strip()
+        calculo = len(nome) + len(conjuge)
+        print(calculo)
+    else:
+        print(len(nome))
+
+if __name__ == '__main__':
+    main()
