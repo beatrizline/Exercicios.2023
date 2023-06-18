@@ -1,0 +1,27 @@
+# Escreva um programa que leia três números por parâmetro e mostre na tela em ordem crescente.
+
+def numero_crescet(a, b, c):
+    if a > b > c:
+        return c, b, a
+    if a > c > b:
+        return b, c, a
+    if b > a > c:
+        return c, a, b
+    if b > c > a:
+        return a, c, b
+    if c > b > a:
+        return a, b, c
+    if c > a > b:
+        return b, a, c
+
+def main():
+    n1 = int(input())
+    n2 = int(input())
+    n3 = int(input())
+    resultado = numero_crescet(n1,n2,n3)
+    print(resultado[0])
+    print(resultado[1])
+    print(resultado[2])
+
+if __name__ == '__main__':
+    main()
