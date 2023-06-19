@@ -1,0 +1,15 @@
+for i in range(6):
+    #lista de letras para criptografar
+    alfabeto = "abcdefghijklmnopqrstuvwxyz"
+
+    chave = 12
+
+    letra = input("Por favor, entre com uma letra para descriptografar: ")
+
+    posicao = alfabeto.find(letra)
+
+    novaPosicao = (posicao - chave) % 26
+
+    letraCriptografada = alfabeto[novaPosicao]
+
+    print("Sua letra descriptografada e", letraCriptografada)
