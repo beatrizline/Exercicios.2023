@@ -1,0 +1,25 @@
+#lista de letras para criptografar
+alfabeto = "abcdefghijklmnopqrstuvwxyz"
+
+#a chave secreta e 3
+chave = -3
+
+letra = input("Por favor, entre com uma letra para descriptografar: ")
+
+#encontre a posiçao da letra em alfabeto
+#exemplo: 'a' esta na posiçao 0, 'e' esta na posiçao 4, etc.
+posicao = alfabeto.find(letra)
+
+#some a chave secreta para encontrar a posiçao da letra criptografada
+#% 26 significa 'volte para 0 quando voce chegar no 26'
+novaPosicao = (posicao + chave) % 26
+
+#  A operação de módulo por 26 garante que o resultado esteja dentro do intervalo de 0 a 25
+#  que é comumente usado para representar as letras do alfabeto.
+# Significa que no processo de encontrar o numero da posiçao do caracter criptografado, o numero
+# e reiniciado para 0 assim que ele atinge 26.
+
+#a letra criptografada esta no alfabeto na nova posicao
+letraCriptografada = alfabeto[novaPosicao]
+
+print("Sua letra descriptografada e", letraCriptografada)
