@@ -1,0 +1,26 @@
+print("Calculadora do Amor")
+print(" <3 "*7)
+nome = str(input("Digite o primeiro nome: "))
+nome2 = str(input("Digite o segundo nome: "))
+
+placar = 0
+for letra1 in nome:
+    for letra2 in nome2:
+        if letra1.lower() == letra2.lower():
+            placar += 1
+
+for letra in nome.lower():
+    if letra in "amor":
+        placar += 1
+
+for letra in nome2.lower():
+    if letra in "amor":
+        placar += 1
+
+if placar > 50:
+    print("O grau de compatilidade: ", placar*10)
+    print("Infelizmente não são compatíveis :/ ")
+else:
+    print("O grau de compatilidade: ", placar*10)
+    print("Parabéns! Vocês fazem um belo casal")
+
