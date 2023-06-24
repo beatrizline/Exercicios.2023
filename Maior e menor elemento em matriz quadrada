@@ -1,0 +1,43 @@
+# Faça um programa para ler uma matriz quadrada de ordem n e mostre 
+# uma tupla com a posição (linha e coluna) do maior e menor elemento.
+
+def ler_matriz(n):
+    matriz = []
+    for l in range(n):
+        linha = []
+        for c in range(n):
+            elemento = int(input())
+            linha.append(elemento)
+        matriz.append(linha)
+    return matriz
+
+def lendo_indices(matriz):
+    maior = matriz[0][0]
+    menor = matriz[0][0]
+    o_maior = (0, 0)
+    o_menor = (0, 0)
+    n = len(matriz)
+
+    for linha in range(n):
+        for coluna in range(n):
+            if matriz[linha][coluna] > maior:
+                maior = matriz[linha][coluna]
+                o_maior = (linha, coluna)
+
+            if matriz[linha][coluna] < menor:
+                menor = matriz[linha][coluna]
+                o_menor = (linha, coluna)
+
+    return o_maior, o_menor
+
+def main():
+    n = int(input())
+    matriz = ler_matriz(n)
+
+    posicao_maior, posicao_menor = lendo_indices(matriz)
+
+    print(posicao_maior)
+    print(posicao_menor)
+
+if __name__ == '__main__':
+    main()
