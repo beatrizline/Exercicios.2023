@@ -1,0 +1,58 @@
+# Fazer um programa para ler uma matriz n x m de números inteiros. 
+# Os valores de n e m são inteiros, positivos e devem ser informados pelo usuário, calcular e armazenar em uma tupla para mostrar, respectivamente: 
+# a) a soma dos elementos da primeira linha 
+# b) a soma dos elementos da última coluna 
+# c) a média de todos os elementos d) o menor elemento e) o maior elemento
+
+def ler_matriz(linhas,colunas):
+    matriz = []
+    for lin in range(linhas):
+        linha = []
+        for col in range(colunas):
+            h = int(input())
+            linha.append(h)
+        matriz.append(linha)
+    return matriz
+
+def soma_linha0(matriz):
+    soma = matriz[0]
+    soma = sum(soma)
+    return soma
+
+def soma_ultimalinha(matriz):
+    ultima_coluna = [linha[-1] for linha in matriz]
+    soma = sum(ultima_coluna)
+    return soma
+
+def media_elementos(matriz):
+    lista_elementos = [elemento for linha in matriz for elemento in linha]
+    media = round(sum(lista_elementos) / len(lista_elementos),4)
+    return media
+
+def menor_elemento(matriz):
+    lista_elementos = [elemento for linha in matriz for elemento in linha]
+    minimo = min(lista_elementos)
+    return minimo
+
+def maior_elemento(matriz):
+    lista_elementos = [elemento for linha in matriz for elemento in linha]
+    maximo = max(lista_elementos)
+    return maximo
+
+def main():
+    l = int(input())
+    c = int(input())
+    matriz = ler_matriz(l,c)
+
+    linha0 = soma_linha0(matriz)
+    ultimaLinha = soma_ultimalinha(matriz)
+    media = media_elementos(matriz)
+    menor = menor_elemento(matriz)
+    maior = maior_elemento(matriz)
+
+    resultado_Matriz = (linha0,ultimaLinha,media,menor,maior)
+
+    print(resultado_Matriz)
+
+if __name__ == '__main__':
+    main()
