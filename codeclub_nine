@@ -1,0 +1,92 @@
+nomes_femea = []
+nomes_macho = []
+
+def adicionar_nome():
+    tipo_animal = input("Qual é o tipo de animal (cachorro, gato, etc.)? ")
+    nome = input("Digite o nome: ")
+
+    if tipo_animal.lower() == "cachorro" or tipo_animal.lower() == "gato":
+        genero = input("Qual é o gênero (macho/fêmea)? ")
+        if genero.lower() == "macho":
+            nomes_macho.append(nome)
+        elif genero.lower() == "fêmea":
+            nomes_femea.append(nome)
+        else:
+            print("Opção inválida.")
+    else:
+        print("Tipo de animal não suportado.")
+
+
+def remover_nome():
+    tipo_animal = input("Qual é o tipo de animal (cachorro, gato, etc.)? ")
+    nome = input("Digite o nome a ser removido: ")
+
+    if tipo_animal.lower() == "cachorro" or tipo_animal.lower() == "gato":
+        genero = input("Qual é o gênero (macho/fêmea)? ")
+        if genero.lower() == "macho":
+            if nome in nomes_macho:
+                nomes_macho.remove(nome)
+                print("Nome removido com sucesso.")
+            else:
+                print("O nome não foi encontrado.")
+        elif genero.lower() == "fêmea":
+            if nome in nomes_femea:
+                nomes_femea.remove(nome)
+                print("Nome removido com sucesso.")
+            else:
+                print("O nome não foi encontrado.")
+        else:
+            print("Opção inválida.")
+    else:
+        print("Tipo de animal não suportado.")
+
+
+def obter_nomes(num_nomes):
+    tipo_animal = input("Qual é o tipo de animal (cachorro, gato, etc.)? ")
+    genero = input("Qual é o gênero (macho/fêmea)? ")
+
+    nomes = []
+    if tipo_animal.lower() == "cachorro" or tipo_animal.lower() == "gato":
+        if genero.lower() == "macho":
+            nomes = nomes_macho
+        elif genero.lower() == "fêmea":
+            nomes = nomes_femea
+        else:
+            print("Opção inválida.")
+            return []
+    else:
+        print("Tipo de animal não suportado.")
+        return []
+
+    if num_nomes <= len(nomes):
+        return nomes[:num_nomes]
+    else:
+        print("Não há nomes suficientes na lista.")
+        return []
+
+
+def menu():
+    while True:
+        print("\n----- Menu -----")
+        print("1. Adicionar nome")
+        print("2. Remover nome")
+        print("3. Obter nomes")
+        print("4. Sair")
+
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == "1":
+            adicionar_nome()
+        elif opcao == "2":
+            remover_nome()
+        elif opcao == "3":
+            num_nomes = int(input("Quantos nomes você precisa? "))
+            nomes = obter_nomes(num_nomes)
+            print("Nomes encontrados:", nomes)
+        elif opcao == "4":
+            break
+        else:
+            print("Opção inválida.")
+
+
+menu()
