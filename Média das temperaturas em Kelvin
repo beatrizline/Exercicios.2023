@@ -1,0 +1,35 @@
+# Faça um programa que receba a temperatura média de cada mês do ano. 
+# A temperatura pode ser informada em graus Celsius, Fahrenheit ou Kelvin. 
+# Após isto, calcule a média anual das temperaturas e mostre, em Kelvin, todas as temperaturas acima da média anual 
+# e em que mês elas ocorreram (mostrar o mês por extenso: 1 – Janeiro, 2 – Fevereiro, ... ).
+
+meses = ('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro')
+
+def converter_temp(t, e):
+    if e == 'C':
+        return round(t + 273.15,4)
+    elif e == 'F':
+        return round((t + 459.67) * 5/9,2)
+    else:
+        return t
+
+def main():
+    temperaturas = []
+    for i in range(12):
+        temperatura = float(input().strip())
+        escala = input().upper().strip()
+        resultado = converter_temp(temperatura,escala)
+        temperaturas.append(resultado)
+
+    media = sum(temperaturas) / len(temperaturas)
+
+    print("TEMPERATURA MÉDIA ANUAL")
+    print(f'{round(media,2)}K')
+    print("TEMPERATURAS ACIMA DA MÉDIA ANUAL:")
+
+    for i in range(12):
+        if temperaturas[i] > media:
+            print(f"{meses[i]}: {temperaturas[i]}K")
+
+if __name__ == '__main__':
+    main()
