@@ -1,0 +1,38 @@
+dados_vendas = {}
+
+anos = [2013, 2014, 2015, 2016, 2017, 2018]
+
+for fabricante in ["Fiat", "Ford", "GM", "Wolkswagen"]:
+    vendas = []
+    for ano in anos:
+        venda = int(input())
+        vendas.append(venda)
+    dados_vendas[fabricante] = vendas
+
+ano_especifico = int(input())
+maior_venda = 0
+fabricante_maior_venda = ""
+
+for fabricante, vendas in dados_vendas.items():
+    venda_ano_especifico = vendas[anos.index(ano_especifico)]
+    if venda_ano_especifico > maior_venda:
+        maior_venda = venda_ano_especifico
+        fabricante_maior_venda = fabricante
+
+print(f"A fabricante que mais vendeu em {ano_especifico} foi a {fabricante_maior_venda} com {maior_venda} mil unidades.")
+
+maior_volume_geral = 0
+ano_maior_volume = 0
+
+for ano in anos:
+    volume_geral = sum([vendas[anos.index(ano)] for vendas in dados_vendas.values()])
+    if volume_geral > maior_volume_geral:
+        maior_volume_geral = volume_geral
+        ano_maior_volume = ano
+
+print(f"O ano de maior volume geral de vendas foi {ano_maior_volume} com {maior_volume_geral} mil unidades.")
+print('A média anual de vendas de cada fabricante entre 2013 e 2018 foi:')
+for fabricante, vendas in dados_vendas.items():
+    media_vendas = sum(vendas) / len(vendas)
+    m = round(media_vendas, 2)
+    print(f"A {fabricante} vendeu em média {m} unidades por ano.")
