@@ -1,0 +1,36 @@
+anos = [2014, 2015, 2016, 2017]
+filiais = ['Filial 1', 'Filial 2', 'Filial 3']
+meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+         'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+
+def criando_array():
+    array_3d = []
+    for ano in range(4):
+        matriz = []
+        for filial in range(3):
+            vetor = []
+            for mes in range(12):
+                vetor.append(int(input().strip()))
+            matriz.append(vetor)
+        array_3d.append(matriz)
+
+    return array_3d
+
+def calculos(arr):
+    tot_per_tod_fil = 0
+    for i, ano in enumerate(arr):
+        tot_fil_ano = 0
+        for j, filial in enumerate(ano):
+            tot_ano_fil = 0
+            for k, mes in enumerate(filial):
+                print(f'{anos[i]};{filiais[j]};{meses[k]};{mes}')
+                tot_ano_fil += mes
+                tot_fil_ano += mes
+                tot_per_tod_fil += mes
+                print(end='')
+            print(f'TOTAL {anos[i]} {filiais[j]};{tot_ano_fil}'.upper())
+        print(f'TOTAL {anos[i]} TODAS FILIAIS;{tot_fil_ano}')
+    print(f'TOTAL PERÍODO TODAS FILIAIS;{tot_per_tod_fil}')
+
+array_3d = criando_array()
+calculos(array_3d)
