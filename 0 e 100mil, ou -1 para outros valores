@@ -1,0 +1,28 @@
+# Escreva um programa que leia um número inteiro.
+# Mostre a soma dos dígitos para os números entre 0 (zero) e 100 mil ou -1 para outros valores.
+# Por exemplo: Em 16.759 a soma dos dígitos é 1 + 6 + 7 + 5 + 9 = 31 é o valor retornado;
+# Em 136.759 o valor lido
+# é maior que 100 mil e deve retornar -1; Em -100 o valor lido é negativo e deve retornar -1.
+
+def numero(num):
+    if num < 100000 and num >= 0:
+        soma = 0
+        while num != 0:
+            r = num % 10
+            num = num // 10
+            soma = soma + r
+
+    else:
+        if num >= 100000 or num < 0:
+            num = -1
+            soma = num
+
+    return soma
+
+def main():
+    num = int(input())
+    resultado = numero(num)
+    print(f'{resultado}')
+
+if __name__ == '__main__':
+    main()
