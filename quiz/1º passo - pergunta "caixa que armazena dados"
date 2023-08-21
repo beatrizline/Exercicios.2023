@@ -1,0 +1,21 @@
+#Passo1_Perguntando uma Questao
+#Passo2
+
+# Quiz muito simples que pergunta ao jogador a questao, e entao mostre a ele uma face sorridente
+# se ele escolher a alternativa correta
+
+print("Passo 1. No Python, como se chama uma 'caixa' usada para armazenar dados? ")
+resposta = input()
+
+if resposta == 'variavel':
+    print(" :) " * 10)
+
+print ("Obrigado por jogar!")
+
+print("Passo 2. No Python, como se chama uma 'caixa' usada para armazenar dados? ")
+resposta = input().lower()
+
+if resposta == 'variavel':
+    print(" :) " * 10)
+
+print ("Obrigado por jogar!")
