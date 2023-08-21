@@ -1,0 +1,18 @@
+# Escreva um programa que leia um número inteiro e some 5 caso valor lido
+# seja par ou some 8 caso o valor lido seja ímpar. Mostre na tela o resultado da operação.
+
+def data_ano(num):
+    if num % 2 == 0:
+        num1 = num + 5
+    if num % 2 != 0:
+        num1 = num + 8
+
+    return num1
+
+def main():
+    num = int(input())
+    resultado = data_ano(num)
+    print(f'{resultado}')
+
+if __name__ == '__main__':
+    main()
