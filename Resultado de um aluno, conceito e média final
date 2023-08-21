@@ -1,0 +1,58 @@
+# Escreva um programa que leia o número de matrícula de um aluno,
+# suas notas em 3 provas e a média das notas obtidas nos exercícios que fazem parte da sua avaliação.
+# Calcule a média final usando a fórmula:
+
+# 2028211MTDS9876
+# 7.59
+# B
+# Aprovado
+
+# Escreva um programa que leia o número de matrícula de um aluno, suas notas em 3 provas 
+# e a média das notas obtidas nos exercícios que fazem parte da sua avaliação. Calcule a média final usando a fórmula:
+# Média Final = (Nota 1 + Nota 2 * 2 + Nota 3 * 3 + Média Exercícios) / 7
+# A atribuição dos conceitos obedece a tabela abaixo.
+# Conceito |Média Final
+# A | >= 9.0
+# B | >= 7.5 e < 9.0
+# C | >= 6.0 e < 7.5
+# D | >= 4.0 e < 6.0
+# E | < 4.0
+# O programa deve escrever a matrícula do aluno, a média final, o conceito 
+# correspondente e a mensagem “Aprovado” se o conceito for A, B ou C ou “Reprovado” se o conceito for D ou E.
+
+def aprovado_reprovado(nota1, nota2, nota3, media_Exercicio):
+    media = (nota1 + (nota2 * 2) + (nota3 * 3) + media_Exercicio)  / 7
+    if media >= 9.0:
+        media = (f'A\nAprovado')
+    elif media >= 7.5 and media < 9.0:
+        media = (f'B\nAprovado')
+    elif media >= 6.0 and media < 7.5:
+        media = (f'C\nAprovado')
+    elif media >= 4.0 and media < 6.0:
+        media = (f'D\nReprovado')
+    elif media < 4.0:
+        media = (f'E\nReprovado')
+    else:
+        media = media
+
+    return media
+
+def aprovado_reprovado1(nota1, nota2, nota3, media_Exercicio):
+    media = (nota1 + (nota2 * 2) + (nota3 * 3) + media_Exercicio) / 7
+
+    return media
+
+def main():
+    matricula = input()
+    nota1 = float(input())
+    nota2 = float(input())
+    nota3 = float(input())
+    media_exercicio = float(input())
+    resultado = aprovado_reprovado1(nota1, nota2, nota3, media_exercicio)
+    resultado1 = aprovado_reprovado(nota1, nota2, nota3, media_exercicio)
+    print(f'{matricula}')
+    print(f'{resultado:.2f}')
+    print(f'{resultado1}')
+
+if __name__ == '__main__':
+    main()
