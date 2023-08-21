@@ -1,0 +1,105 @@
+#DESAFIO: Mantendo a pontuaçao
+#Você consegue usar uma variável score no quiz, para medir o #progresso da pontuação do jogador? A variável pode ser usada #desta forma: 
+# No começo do programa, deixe a pontuação em 0.
+#Sempre que uma pergunta é respondida corretamente, adicione 1 na pontuação do jogador. (score = score + 1)
+# Mostre a pontuação do jogador no final do quiz. 
+
+
+#DESAFIO: Como eu fiz?
+#Você consegue exibir uma mensagem personalizada para o jogador no final do jogo? 
+#Diga "muito bem" if se ele acertou todas as questões. 
+#else diga "tente novamente" se ele errou alguma. 
+#(Você precisará usar sua variável score para decidir qual mensagem exibir!)
+print('''
+
+
+Q1 - No Python, como se chama uma sequencia de comandos que executa uma determinada tarefa e tem nome?
+Dica: A sua principal finalidade consiste em nos ajudar a organizar programas em pedaços
+a - funçao
+b - variavel
+c - string
+''')
+resposta = input().lower()
+
+if resposta == 'a':
+    score = 1
+    print ('Correto!')
+
+if resposta == 'b':
+    score = 0
+    print ('Nao :( - Variavel e uma "caixa" que serve para armazenar dados.')
+
+if resposta == 'c':
+    score = 0
+    print ('Nao seja bobinho! :(.')
+
+
+print('''
+Q2 - Em geral, qual sistema operacional e mais seguro, estavel e intuitivo em comparaçao com o Windows? 
+a - Haiku
+b - Linux
+c - FreeDOS
+''')
+resposta2 = input().lower()
+
+if resposta2 == 'a':
+    score2 = 0
+    print ('Nao :(. Esse e um dos poucos conhecidos e menos utilizados')
+
+if resposta2 == 'b':
+    score2 = 1
+    print ('Certa resposta')
+
+if resposta2 == 'c':
+    score2 = 0
+    print ('Nao seja bobinho! :(.')
+
+
+print('''
+Q3 - Sequencia finita de açoes executaveis que visam obter uma soluçao para um determinado tipo de problema:
+ 
+a - Algortimo
+b - Ingredientes
+c - Liquidificador 
+''')
+resposta3 = input().lower()
+
+if resposta3 == 'a':
+    score3 = 1
+    print ('Correto!')
+
+if resposta3 == 'b':
+    score3 = 0
+    print ('Nao :( - Variavel e uma "caixa" que serve para armazenar dados.')
+
+if resposta3 == 'c':
+    score3 = 0
+    print ('Nao seja bobinho! :(.')
+
+print('Agora vamos verificar quantas questoes voce acertou...')
+
+if score == 1 and score2 == 1 and score3 == 1:
+    print ('Voce acertou todas as tres questoes!. Muito bem!')
+
+if score == 1 and score2 == 0 and score3 == 0:
+    print ('Voce acertou somente uma questao!. Tente novamente, por favor!')
+
+if score == 0 and score2 == 0 and score3 == 0:
+    print('Voce errou todas as tres questoes!... :( Tente novamente, por favor')
+
+if score == 1 and score2 == 0 and score3 == 1:
+    print('Voce acertou somente duas questoes!. Tente novamente, por favor')
+
+if score == 1 and score2 == 1 and score3 == 0:
+    print('Voce acertou somente duas questoes!. Tente novamente, por favor')
+
+if score == 0 and score2 == 1 and score3 == 1:
+    print('Voce acertou somente duas questoes!. Tente novamente, por favor')
+
+if score == 0 and score2 == 1 and score3 == 0:
+    print('Voce acertou somente uma questao!. Tente novamente, por favor')
+
+if score == 0 and score2 == 0 and score3 == 1:
+    print('Voce acertou somente uma questao!. Tente novamente, por favor')
+
+print(f'Sua pontuaçao total e: {score + score2 + score3}')
