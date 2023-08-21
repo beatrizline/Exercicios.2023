@@ -1,0 +1,35 @@
+# O índice de massa corporal (IMC) é uma medida internacional usada para calcular se uma pessoa está no peso ideal.
+# O IMC é determinado pela divisão da massa do indivíduo pelo quadrado de sua altura, em que a massa está em quilogramas e a altura em metros.
+# Escreva um programa que leia a massa (o peso) e a altura de
+# uma pessoa e calcula o IMC de uma pessoa, e depois, mostra uma das seguintes mensagens:
+
+def imc(massa, altura):
+    peso_calculando = massa // (altura ** 2)
+
+    if peso_calculando < 18.5:
+
+        return f'{peso_calculando} \nAbaixo do peso'
+
+    elif peso_calculando < 25:
+        return f'{peso_calculando} \nPeso normal'
+
+    elif peso_calculando < 30:
+        return f'{peso_calculando} \nSobrepeso'
+
+    elif peso_calculando < 35:
+        return f'{peso_calculando} \nObeso leve'
+
+    elif peso_calculando < 40:
+        return f'{peso_calculando} \nObeso moderado'
+
+    else:
+        return f'{peso_calculando} \nObeso mórbido'
+
+def main():
+    massa = float(input())
+    altura = float(input())
+    resultado = imc(massa, altura)
+    print(f'{resultado}')
+
+if __name__ == '__main__':
+    main()
