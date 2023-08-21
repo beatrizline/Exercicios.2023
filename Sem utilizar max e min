@@ -1,0 +1,44 @@
+# Escreva um programa que leia 5 números inteiros e escreva o maior e o menor deles.
+# Considere que todos os valores são diferentes. NÃO use as funções min() e max().
+
+def maior(n1,n2,n3,n4,n5):
+    if n1 > n2 and n1 > n3 and n1 > n4 and n1 > n5:
+        numero = (f'{n1}')
+    elif n2 > n1 and n2 > n3 and n2 > n4 and n2 > n5:
+        numero = (f'{n2}')
+    elif n3 > n1 and n3 > n2 and n3 > n4 and n3 > n5:
+        numero = (f'{n3}')
+    elif n4 > n1 and n4 > n2 and n4 > n3 and n4 > n5:
+        numero = (f'{n4}')
+    else:
+        numero = (f'{n5}')
+
+    return numero
+
+def menor(n1,n2,n3,n4,n5):
+    if n1 < n2 and n1 < n3 and n1 < n4 and n1 < n5:
+        numero = (f'{n1}')
+    elif n2 < n1 and n2 < n3 and n2 < n4 and n2 < n5:
+        numero = (f'{n2}')
+    elif n3 < n1 and n3 < n2 and n3 < n4 and n3 < n5:
+        numero = (f'{n3}')
+    elif n4 < n1 and n4 < n2 and n4 < n3 and n4 < n5:
+        numero = (f'{n4}')
+    else:
+        numero = (f'{n5}')
+
+    return numero
+
+def main():
+    n1 = int(input())
+    n2 = int(input())
+    n3 = int(input())
+    n4 = int(input())
+    n5  = int(input())
+    resultado = maior(n1,n2,n3,n4,n5)
+    print(f'{resultado}')
+    resultado1 = menor(n1,n2,n3,n4,n5)
+    print(f'{resultado1}')
+
+if __name__ == '__main__':
+    main()
