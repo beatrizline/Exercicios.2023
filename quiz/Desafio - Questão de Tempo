@@ -1,0 +1,20 @@
+#Desafio: Questao de Tempo  
+
+# Meu proprio QUIZ
+
+nome = input('Oi! Como voce se chama? ')
+print(f'{nome}, que bom te conhecer!')
+
+gostos_musiciais = 'Black Sabbath, Nirvana, Linkin Park'
+x = input('Qual banda voce curte ouvir? ')
+if x in gostos_musiciais:
+    print("Nossos gostos combinam!")
+else:
+    print("Que legal!")
+
+frutas = 'Mamao, Tangerina, Abacate'
+y = input('\nQual sua fruta preferida? ')
+if y in frutas:
+    print("Eu tambem! ")
+else:
+    print("hum...entendi")
