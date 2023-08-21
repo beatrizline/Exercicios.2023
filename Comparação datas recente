@@ -1,0 +1,27 @@
+# Escreva um programa que leia 2 datas (cada data é composta por 3 variáveis
+# inteiras: dia, mês e ano) e escreva qual delas é a mais recente.
+
+def ano_recente(d1,m1,a1,d2,m2,a2):
+    primeiro_ano = d1,m1,a1
+    segundo_ano = d2,m2,a2
+    if primeiro_ano > segundo_ano :
+        numero = (f'{d1}/{m1}/{a1}')
+    else:
+        numero = (f'{d2}/{m2}/{a2}')
+
+    return numero
+
+def main():
+    dia = int(input())
+    mes = int(input())
+    ano = int(input())
+
+    dia2 = int(input())
+    mes2 = int(input())
+    ano2 = int(input())
+    resultado = ano_recente(dia,mes,ano,dia2,mes2,ano2)
+
+    print (resultado)
+
+if __name__ == '__main__':
+    main()
