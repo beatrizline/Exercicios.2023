@@ -1,0 +1,20 @@
+#Passo 3: Multiplas Escolhas
+# Um questao QUIZ de multipla escolha
+
+print('''
+Q1 - No Python, como se chama uma sequencia de comandos que executa alguma tarefa e tem nome?
+Dica: A sua principal finalidade e nos ajudar a organizar programas em pedaços
+a - funçao
+b - variavel
+c - string
+''')
+resposta = input().lower()
+
+if resposta == "a":
+    print("Correto!! :) ")
+elif resposta == "b":
+    print("Nao :( - Variavel e uma 'caixa' que serve para armazenar dados")
+elif resposta == "c":
+    print("Nao seja bobinho! :( ")
+else:
+    print("Voce nao escolheu a,b,c :( ")
