@@ -8,7 +8,7 @@ class ContaCorrente:
 
     def debitar(self, valor):
         if valor <= self._saldo:
-            self._saldo -= valor + 2  # Charge R$ 2.00 for each withdrawal
+            self._saldo -= valor + 2 
         else:
             print("Saldo insuficiente.")
 
@@ -31,12 +31,12 @@ class ContaPoupanca(ContaCorrente):
     def __init__(self, numero, taxa_juros, saldo=0):
         super().__init__(numero, saldo)
         self.taxa_juros = taxa_juros
-        self.saques = 0  # Track the number of withdrawals
+        self.saques = 0  
 
     def sacar(self, valor):
         self.saques += 1
         if self.saques > 4:
-            valor += 0.50  # Charge R$ 0.50 for withdrawals beyond the 4th
+            valor += 0.50   
         super().debitar(valor)
 
     def render_juros(self):
@@ -55,10 +55,10 @@ class Banco:
         self.contas.append(conta)
 
     def sacar(self, conta):
-        conta.sacar(50)  # Assuming a withdrawal of R$ 50.00 for testing purposes
+        conta.sacar(50)
 
 
-# Test
+
 banco = Banco()
 conta_corrente1 = ContaCorrente(numero=1)
 conta_poupanca1 = ContaPoupanca(numero=2, taxa_juros=2.0)
