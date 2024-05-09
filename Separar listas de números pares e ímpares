@@ -1,0 +1,19 @@
+# Leia 20 números inteiros e armazene-os numa lista. 
+# Armazene os números pares na lista PAR e os números ímpares na lista IMPAR. Imprima as três listas
+
+lista = []
+lista_par = []
+lista_impar = []
+
+for i in range(20):
+
+    x = int(input())
+    lista.append(x)
+
+    if x%2 == 0:
+        lista_par.append(x)
+    if x%2 == 1:
+        lista_impar.append(x)
+print(lista)
+print(lista_par)
+print(lista_impar)
