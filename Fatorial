@@ -1,0 +1,19 @@
+# o simbolo referente a fatoração é !
+# Escreva um programa que calcule o fatorial de um número inteiro lido,
+# sabendo-se que: N ! = 1 x 2 x 3 x ... x N-1 x N 0 ! = 1
+
+def fatorial(n):
+    contando = 1
+    resultado = 1
+
+    while contando <= n:
+        resultado *= contando
+        contando += 1
+    print(resultado)
+
+def main():
+    n = int(input())
+    resultado = fatorial(n)
+
+if __name__ == '__main__':
+    main()
