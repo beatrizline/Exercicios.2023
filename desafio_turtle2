@@ -1,0 +1,38 @@
+from turtle import *
+
+def drawPlanet(planetSize,planetColour):
+  color(planetColour)
+  pendown()
+  begin_fill()
+  for side in range(35):
+    left(10)
+    forward(planetSize)
+  end_fill()
+  penup()
+
+bgcolor("MidnightBlue")
+
+drawPlanet(15, "Light blue")
+forward(15)
+pendown()
+
+def drawStar(starSize):
+  pendown()
+  begin_fill()
+  for side in range(5):
+    left(144)
+    forward(starSize)
+  end_fill()
+  penup()
+
+color("WhiteSmoke")
+
+drawStar(50)
+forward(100)
+drawStar(30)
+left(120)
+forward(150)
+drawStar(70)
+
+hideturtle()
+done()
