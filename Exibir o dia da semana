@@ -1,0 +1,27 @@
+# Escreva um programa que leia um número e exiba o dia correspondente da semana.
+# (1-domingo, 2-segunda-feira, 3-terça-feira etc.), se digitar outro valor deve aparecer “valor inválido”.
+
+def numero_inteiro(n1):
+    if n1 == 1:
+        print('domingo')
+    elif n1 == 2:
+        print('segunda-feira')
+    elif n1 == 3:
+        print('terça-feira')
+    elif n1 == 4:
+        print('quarta-feira')
+    elif n1 == 5:
+        print('quinta-feira')
+    elif n1 == 6:
+        print('sexta-feira')
+    elif n1 == 7:
+        print('sábado')
+    else:
+        print('valor inválido')
+
+def main():
+    n1 = int(input())
+    numero_inteiro(n1)
+
+if __name__ == '__main__':
+    main()
