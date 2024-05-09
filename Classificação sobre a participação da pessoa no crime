@@ -1,0 +1,64 @@
+# Faça 5 perguntas para uma pessoa sobre um crime. As perguntas são
+# a) "Telefonou para a vítima ?"
+# b) "Esteve no local do crime ?"
+# c) "Mora perto da vítima ?"
+# d) "Devia para a vítima ?"
+# e) "Já trabalhou com a vítima ?"
+# Considere “S” para sim ou “N” para não. O programa deve emitir uma classificação sobre a participação da pessoa no crime.
+# Se a pessoa responder positivamente a 2 questões ela deve ser classificada
+# como "Suspeito", entre 3 ou 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+
+def investigando(a,b,c,d,e):
+    a1 = a
+    b1 = b
+    c1 = c
+    d1 = d
+    e1 = d
+
+    if a[0].upper() == 'S':
+        a1 = 1
+    else:
+        a1 = 0
+
+    if b[0].upper() == 'S':
+        b1 = 1
+    else:
+        b1 = 0
+
+    if c[0].upper() == 'S':
+        c1 = 1
+    else:
+        c1 = 0
+
+    if d[0].upper() == 'S':
+        d1 = 1
+    else:
+        d1 = 0
+
+    if e[0].upper() == 'S':
+        e1 = 1
+    else:
+        e1 = 0
+
+    somando_resultado = a1 + b1 + c1 + d1 + e1
+
+    if somando_resultado < 2:
+        print("Inocente")
+    elif somando_resultado == 2:
+        print("Suspeito")
+    elif somando_resultado == 3 or somando_resultado == 4:
+        print("Cúmplice")
+    elif somando_resultado == 5:
+        print("Assassino")
+
+
+def main():
+    a = input()
+    b = input()
+    c = input()
+    d = input()
+    e = input()
+    investigando(a,b,c,d,e)
+
+if __name__ == '__main__':
+    main()
