@@ -1,0 +1,14 @@
+from turtle import *
+
+speed(11)
+shape("turtle")
+pensize(1)
+color("Purple")
+
+for count in range(360):
+  backward(90)
+  left(360/1)
+  left(170)
+  
+  
+done()
