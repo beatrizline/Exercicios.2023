@@ -1,0 +1,23 @@
+from turtle import *
+
+def drawStar():
+  pendown()
+  begin_fill()
+  for side in range(8):
+    left(50)
+    forward(25)
+  end_fill()
+  penup()
+
+color("WhiteSmoke")
+bgcolor("MidnightBlue")
+
+drawStar()
+forward(125)
+drawStar()
+left(75)
+forward(150)
+drawStar()
+
+hideturtle()
+done()
