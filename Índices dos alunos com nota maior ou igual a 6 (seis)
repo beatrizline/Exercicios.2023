@@ -1,0 +1,15 @@
+# Escreva um programa que ler a nota de 50 alunos. Mostre uma lista apenas com os índices dos 
+# alunos que tem nota maior ou igual a 6 (seis).
+
+lista = []
+
+for i in range(50):
+    num = float(input())
+    lista.append(num)
+
+indice_Aprovado = []
+for i in range(len(lista)):
+    if lista[i] >= 6:
+        indice_Aprovado.append(i)
+
+print(indice_Aprovado)
