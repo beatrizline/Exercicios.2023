@@ -1,0 +1,18 @@
+from turtle import *
+
+shape("classic") # tipo de seta)
+speed(5) # velocidade da seta
+
+color("Red") # cor da seta
+pensize(1) # grossura da seta
+right(90) #direita
+forward(100) # pra frente
+left(90)
+forward(150)
+
+color("Red")
+pensize(1)
+left(90)
+forward(100)
+right(90)
+backward(150)
