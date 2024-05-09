@@ -1,0 +1,24 @@
+# Você tem uma poupança de 10 mil reais, que rende 0,7% ao mês. Você deseja comprar um carro,
+# mas o preço do carro sobe a taxa de 0,4% ao mês. Escreva um programa que leia o preço de um
+# carro hoje e calcule em quantos meses, com o dinheiro dessa aplicação, 7
+# você terá dinheiro suficiente para comprar o carro à vista.
+
+def carro(x):
+    poupanca = 10000
+    rende = 0.007
+    carro_taxa = 0.004
+
+    meses = 0
+    while x >= poupanca:
+        poupanca += poupanca * rende
+        x += x * carro_taxa
+        meses += 1
+        if poupanca > x:
+            print(meses)
+
+def main():
+    preco = int(input())# o preço de um carro hoje
+    resultado = carro(preco)
+
+if __name__ == '__main__':
+    main()
