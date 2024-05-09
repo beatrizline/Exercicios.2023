@@ -1,0 +1,29 @@
+# # Escreva um programa que leia uma data no formado DDMMAAA e informe se é uma data válida.
+# OBS: Use apenas condicionais e os tipos básicos do Python; Não utilize bibliotecas do Python que tratam datas;
+# Considere que em anos bissextos o mês de fevereiro tem 29 dias.
+
+def data(dma):
+    a = dma % 10000
+    dma //= 10000
+    m = dma % 100
+    dma //= 100
+    d = dma
+
+    if a % 4 == 0:
+        d_m = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    else:
+        d_m = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+    if m < 1 or m > 12:
+        print("False")
+    elif d < 1 or d > d_m[m - 1]:
+        print("False")
+    else:
+        print("True")
+
+def main():
+    dma = int(input())
+    data(dma)
+
+if __name__ == '__main__':
+    main()
