@@ -1,0 +1,31 @@
+# Escreva um programa que leia uma quantidade n, seguido da leitura de uma lista com n valores. 
+# O programa deve imprimir LISTA ORDENADA ou LISTA NÃO ORDENADA, conforme o caso. 
+# IMPORTANTE: Crie uma função chamada esta_ordenado() que recebe uma lista como parâmetro e retorne True se a 
+# lista estiver classificada em ordem crescente, e False se não for o caso. Por exemplo:
+
+#esta_ordenado([1, 2, 2]) True
+
+#esta_ordenado(['b', 'a']) False
+
+def esta_ordenado(lista):
+    if len(lista) <= 1:
+        return True
+    if lista[0] > lista[1]:
+        return False
+    return esta_ordenado(lista[1:])
+
+n = int(input())
+
+valores = []
+for i in range(1, n + 1):
+    entrada = input()
+    try:
+        valor = float(entrada)
+    except ValueError:
+        valor = entrada.lower()
+    valores.append(valor)
+
+if esta_ordenado(valores):
+    print("LISTA ORDENADA")
+else:
+    print("LISTA NÃO ORDENADA")
