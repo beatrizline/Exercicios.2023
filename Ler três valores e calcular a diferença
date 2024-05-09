@@ -1,0 +1,25 @@
+# Escreva um programa que leia 3 valores inteiros. Determine se é o segundo ou o terceiro valor lido que possui menor diferença com relação ao primeiro, imprimindo o valor da diferença.
+
+def tres_valores(n1,n2,n3):
+    operacao1 = n1 - n3
+    operacao2 = n1 - n2
+
+    if n2 > n3 > n1:
+        print (abs(operacao1))
+    if n2 > n1 > n3:
+        print (abs(operacao1))
+    if n1 > n2 > n3:
+        print (abs(operacao2))
+    if n1 > n3 > n2:
+        print (abs(operacao1))
+    if n3 > n2 > n1:
+        print (abs(operacao2))
+
+def main():
+    n1 = int(input())
+    n2 = int(input())
+    n3 = int(input())
+    tres_valores(n1,n2,n3)
+
+if __name__ == '__main__':
+    main()
