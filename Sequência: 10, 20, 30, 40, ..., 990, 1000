@@ -1,0 +1,17 @@
+# Escreva um programa que gere a seguinte sequência: 10, 20, 30, 40, ..., 990, 1000.
+# Considere a separação dos números por vírgula seguido de espaço em
+# branco e o pontos no final da sequência.
+
+def numero(x):
+    for x in range(10,1001,10):
+        if x < 1000:
+            print(x, end= ', ')
+        else:
+            print(x, end= '.')
+
+def main():
+    x = int()
+    numero(x)
+
+if __name__ == '__main__':
+    main()
