@@ -1,0 +1,99 @@
+# Escreva um programa que leia um número inteiro menor que 1000 e mostre por extenso a quantidade de centenas, dezenas e unidades do número lido, 
+# observando os termos no plural, a colocação do "e" ou da vírgula entre valores e o ponto “.” no final da frase. Exemplos:
+
+   # 521 = cinco centenas, duas dezenas e uma unidade.
+   # 107 = uma centena e sete unidades.
+   # 80 = oito dezenas.
+
+def numero_inteiro(n):
+    u = n // 1 % 10
+    d = n // 10 % 10
+    c = n // 100 % 10
+
+    separador1 = ""
+    separador2 = ""
+
+    if c > 0 and d > 0 and u > 0:
+        separador1 = ", "
+        separador2 = " e "
+    elif c > 0 and d > 0:
+        separador1 = " e "
+        separador2 = ""
+    elif (c > 0 and u > 0) or (d > 0 and u > 0):
+        separador1 = ""
+        separador2 = " e "
+
+    if u > 0:
+        if u == 1:
+            u = "uma unidade"
+        elif u == 2:
+            u = "duas unidades"
+        elif u == 3:
+            u = "três unidades"
+        elif u == 4:
+            u = "quatro unidades"
+        elif u == 5:
+            u = "cinco unidades"
+        elif u == 6:
+            u = "seis unidades"
+        elif u == 7:
+            u = "sete unidades"
+        elif u == 8:
+            u = "oito unidades"
+        elif u == 9:
+            u = "nove unidades"
+    else:
+        u = ""
+
+    if d > 0:
+        if d == 1:
+            d = "uma dezena"
+        elif d == 2:
+            d = "duas dezenas"
+        elif d == 3:
+            d = "três dezenas"
+        elif d == 4:
+            d = "quatro dezenas"
+        elif d == 5:
+            d = "cinco dezenas"
+        elif d == 6:
+            d = "seis dezenas"
+        elif d == 7:
+            d = "sete dezenas"
+        elif d == 8:
+            d = "oito dezenas"
+        elif d == 9:
+            d = "nove dezenas"
+    else:
+        d = ""
+
+    if c > 0:
+        if c == 1:
+            c = "uma centena"
+        elif c == 2:
+            c = "duas centenas"
+        elif c == 3:
+            c = "três centenas"
+        elif c == 4:
+            c = "quatro centenas"
+        elif c == 5:
+            c = "cinco centenas"
+        elif c == 6:
+            c = "seis centenas"
+        elif c == 7:
+            c = "sete centenas"
+        elif c == 8:
+            c = "oito centenas"
+        elif c == 9:
+            c = "nove centenas"
+    else:
+        c = ""
+
+    print(f"{c}{separador1}{d}{separador2}{u}.")
+
+def main():
+    n = int(input())
+    numero_inteiro(n)
+
+if __name__ == '__main__':
+    main()
