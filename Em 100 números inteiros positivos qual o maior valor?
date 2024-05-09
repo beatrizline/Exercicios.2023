@@ -1,0 +1,10 @@
+
+# Escreva um programa que leia um conjunto de 100 números inteiros positivos e determine o maior deles.
+maior_numero = 0
+
+for i in range(100):
+    num = int(input())
+    if num > maior_numero:
+        maior_numero = num
+
+print(maior_numero)
