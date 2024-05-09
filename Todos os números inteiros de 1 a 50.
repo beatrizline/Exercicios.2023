@@ -1,0 +1,12 @@
+#Escreva um programa que mostre todos os números inteiros de 1 a 50 (um por linha).
+
+def numero(x):
+    for x in range(0,50):
+        print(x+1)
+
+def main():
+    x = int()
+    numero(x)
+
+if __name__ == '__main__':
+    main()
