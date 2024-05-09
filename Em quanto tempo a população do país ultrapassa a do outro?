@@ -1,0 +1,28 @@
+# Dado um país A, com taxa de natalidade de 2% ao ano, e um país B com uma taxa de
+# natalidade de 3% ano. Sabe-se que, atualmente, o país A tem população maior que o país B.
+# Faça um programa que leia a população de cada país e imprima o tempo necessário para
+# que a população do país B ultrapasse a população do país A.
+
+def comparacao_paisAB():
+    natalidade_paisA = 0.02  # + ano
+    natalidade_paisB = 0.03  # + ano
+
+    tempo = 0
+
+    a = int(input())
+    b = int(input())
+
+    if a < b:
+        a,b = b,a
+
+    while a > b:
+        a *= (1 + natalidade_paisA)
+        b *= (1 + natalidade_paisB)
+        tempo += 1
+    print (tempo)
+
+def main():
+    comparacao_paisAB()
+
+if __name__ == '__main__':
+    main()
