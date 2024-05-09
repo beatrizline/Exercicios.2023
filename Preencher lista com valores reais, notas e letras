@@ -1,0 +1,47 @@
+# Escreva um programa que leia um número n. Considere uma lista com n posições, e então: 
+# a) preencha com valores reais lidos pelo teclado e imprima na ordem inversa. Considere até 4 (quatro) casas decimais. 
+# b) preencha com n notas lidas pelo teclado e imprima as notas e a média na tela. Considere 1 (uma) casa decimal. 
+# c) preencha com n letras lidas pelo teclado e imprima quantas vogais foram lidas. Imprima as consoantes.
+
+n = int(input())
+valores_reais = []
+letras = []
+
+#letra a
+for i in range(n):
+    num = float(input())
+    valores_reais.insert(0,num)
+
+#letra b
+soma = 0
+k = 0
+notas = []
+for i in range(n):
+    nota = float(input())
+    notas.append(nota)
+    soma += nota
+    media = soma / len(notas)
+
+#letra c
+vogais = 'aeiouAEIOU'
+consoantes = []
+x = 0
+for i in range(n):
+    numero = input().strip()
+    if numero in vogais:
+        x += 1
+    if numero not in vogais:
+        consoantes.append(numero)
+
+print(valores_reais)
+
+print(notas)
+
+if n == 0:
+    print('SEM NOTAS')
+elif n != 0:
+    print(f'{media:.1f}')
+
+
+print(x)
+print(consoantes)
