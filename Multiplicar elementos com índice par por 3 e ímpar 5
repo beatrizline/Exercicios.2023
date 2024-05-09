@@ -1,0 +1,33 @@
+# Escreva um programa que leia uma lista com 100 números. 
+# Ao término da leitura o programa deve fazer a ordenação dos números lidos. 
+# Após a ordenação, crie uma lista onde os elementos de índice par são multiplicados por 3 e os elementos de 
+# índice ímpar são multiplicados com 5. DICA: Use a função a sorted() ou 
+# o método sort() para realizar a ordenação dos valores.
+
+def organizando_lista(lista):
+    #ordena a lista
+    lista_ordenada = sorted(lista)
+
+    lista2 = []
+    for i in range(len(lista_ordenada)):
+        if i % 2 == 0:
+            variavel = lista_ordenada[i] * 3
+        else:
+            variavel = lista_ordenada[i] * 5
+        lista2.append(variavel)
+
+    return lista2
+
+def main():
+    numeros = []
+    for i in range(100):
+        n = int(input())
+        numeros.append(n)
+
+    lista2 = organizando_lista(numeros)
+
+    print(lista2)
+
+if __name__ == '__main__':
+    main()
+    
