@@ -1,0 +1,26 @@
+# Escreva um programa que leia 3 números inteiros e escreva uma das mensagens abaixo, de
+# acordo com os valores:
+# - Todos os valores são diferentes;
+# - Existem dois valores iguais e um diferente;
+# - Todos os valores são iguais.
+
+def tres_numeros(n1,n2,n3):
+    num_igual1 = n1 * 1
+    num_igual2 = n2 * 1
+    num_igual3 = n3 * 1
+
+    if num_igual1 == num_igual2 == num_igual3 or num_igual1 == num_igual3 == num_igual2 or num_igual2 == num_igual1 == num_igual3 or num_igual2 == num_igual3 == num_igual1 or num_igual3 == num_igual1 == num_igual2 or num_igual3 == num_igual2 == num_igual1:
+        print('Todos os valores são iguais')
+    elif num_igual1 == num_igual2 != num_igual3 or num_igual1 == num_igual3 != num_igual2 or num_igual2 == num_igual1 != num_igual3 or num_igual2 == num_igual3 != num_igual1 or num_igual3 == num_igual1 != num_igual2 or num_igual3 == num_igual2 != num_igual1:
+        print('Existem dois valores iguais e um diferente')
+    else:
+        print('Todos os valores são diferentes')
+
+def main():
+    n1 = int(input())
+    n2 = int(input())
+    n3 = int(input())
+    tres_numeros(n1,n2,n3)
+
+if __name__ == '__main__':
+    main()
