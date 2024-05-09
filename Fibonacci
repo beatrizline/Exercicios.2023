@@ -1,0 +1,26 @@
+
+# A Sequência de Fibonacci é uma sequência de números inteiros, começando por 0 e 1, na qual, cada termo subsequente
+# corresponde à soma dos dois anteriores (0, 1, 1, 2, 3, 5, 8, 13, ...).
+# Escreva um programa que leia um número n,
+# calcule e mostre os n primeiros termos da sequência de Fibonacci.
+# O valor lido para n sempre será maior ou igual a 2.
+
+def fibonacci(n):
+    t1 = 0
+    t2 = 1
+    print('{}, {}'.format(t1, t2), end='')
+
+    cont = 3
+    while cont <= n:
+        calculo = t1 + t2
+        print(', {}'.format(calculo), end='')
+        t1 = t2
+        t2 = calculo
+        cont += 1
+
+def main():
+    n = int(input())
+    resultado = fibonacci(n)
+
+if __name__ == '__main__':
+    main()
