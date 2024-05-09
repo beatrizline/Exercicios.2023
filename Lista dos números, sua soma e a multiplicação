@@ -1,0 +1,16 @@
+# Leia uma lista de 10 (dez) números inteiros, mostre os números, sua soma e a multiplicação.
+
+lista = []
+k = 0
+soma = 0
+multi = 1
+
+while k <= 9:
+    lista.append(int(input()))
+    soma = soma + lista[k]
+    multi = multi * lista[k]
+    k += 1
+    
+print(lista)
+print(soma)
+print(multi)
