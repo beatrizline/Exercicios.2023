@@ -1,0 +1,21 @@
+# # Escreva um programa que leia dois valores que correspondem à base e a altura de um retângulo.
+# O programa deve inicialmente verificar se os valores formam um retângulo ou um quadrado.
+# Caso formem um quadrado imprima a palavra QUADRADO e caso seja um retângulo, mostre o perímetro (soma de todos os lados) e a área (base vezes a altura) do retângulo.
+# Separe esses valores com um hífen.
+
+def dois_valores(n1,n2):
+    perimetro = n1 + n1 + n2 + n2
+    area = n1 * n2
+
+    if n1 == n2:
+        print('QUADRADO')
+    else:
+        print(f'{perimetro} - {area}')
+
+def main():
+    n1 = int(input())
+    n2 = int(input())
+    dois_valores(n1,n2)
+
+if __name__ == '__main__':
+    main()
