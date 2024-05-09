@@ -1,0 +1,28 @@
+# Um sacolão está vendendo frutas com a seguinte tabela de preços:
+# Item|Até 5Kg|Acima de 5Kg
+
+# Morango | R$ 2,50 | R$ 2,20
+# Maça | R$ 1,80 | R$ 1,50
+# Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapassar R$ 25,00, receberá
+# ainda um desconto de 10% sobre este total. Escreva um programa que leia a quantidade (em Kg)
+# de morangos e a quantidade (em Kg) de maças adquiridas e escreva o valor a ser pago pelo cliente.
+
+def calculando(morango,maca):
+    p_morango = 2.50 if morango <= 5 else 2.20
+    p_maca = 1.80 if maca <= 5 else 1.50
+    valor_Total = p_morango * morango + p_maca * maca
+
+    if valor_Total > 25 or morango + maca > 8:
+        desconto = 0.1 * valor_Total
+        valor_Total -= desconto
+    return valor_Total
+
+def main():
+    morango = float(input())
+    maca = float(input())
+    resultado = calculando(morango, maca)
+    print(f'{resultado:.2f}')
+
+
+if __name__ == '__main__':
+    main()
