@@ -1,0 +1,30 @@
+# Escreva um programa que leia dois valores e uma das seguintes operações, codificadas dessa forma, será executada:
+# 1 – Adição
+# 2 – Subtração
+# 3 – Multiplicação
+# 4 – Divisão
+# Calcule e escreva o resultado dessa operação sobre os dois valores lidos.
+
+def dois_valores(n1, n2, valor_escolhido):
+    adicao = n1 + n2
+    subtracao = n1 - n2
+    multiplicacao = n1 * n2
+    divisao = n1 / n2
+
+    if valor_escolhido == 1:
+        print (adicao)
+    elif valor_escolhido == 2:
+        print (subtracao)
+    elif valor_escolhido == 3:
+        print (multiplicacao)
+    elif valor_escolhido == 4:
+        print ("%.2f" % round(divisao,2))
+
+def main():
+    n1 = int(input())
+    n2 = int(input())
+    valor_escolhido = int(input())
+    dois_valores(n1,n2,valor_escolhido)
+
+if __name__ == '__main__':
+    main()
