@@ -1,0 +1,11 @@
+from turtle import *
+
+speed(11)
+shape("turtle")
+color("Blue")
+
+for count in range(5):
+  forward(100)
+  left(72)
+
+done()
