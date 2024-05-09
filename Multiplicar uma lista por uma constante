@@ -1,0 +1,29 @@
+# Crie uma função chamada multiplica_constante() que receba a lista original
+# e o valor da constante e retorna uma nova lista com os elementos multiplicados.
+
+def multiplica_constante(listaorigin, valor_constante):
+    nova_lista = []
+    for i in listaorigin:
+        nova_lista.append(i * valor_constante)
+    return nova_lista
+
+def main():
+
+    numero_aleatorio = []
+
+    while True:
+        num = int(input())
+        if num == 0:
+            break
+        numero_aleatorio.append(num)
+
+    valor_constante = int(input())
+    # o programa deve mostrar uma nova lista onde cada valor da lista original e a multiplicado
+    # pelo valor da constante
+
+    nova_lista = multiplica_constante(numero_aleatorio, valor_constante)
+
+    print(nova_lista)
+
+if __name__ == '__main__':
+    main()
