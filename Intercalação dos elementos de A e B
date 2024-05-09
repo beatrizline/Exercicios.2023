@@ -1,0 +1,20 @@
+# Leia duas listas A e B contendo 25 elementos inteiros cada, gerar e imprimir uma lista C de 50 elementos, 
+# cujos elementos sejam a intercalação dos elementos de A e B.
+
+a = []
+b = []
+c = []
+
+for i in range(25):
+    a.append(int(input()))
+
+for i in range(25):
+    b.append(int(input()))
+
+for i in range(25):
+    c.append(a[i])
+    c.append(b[i])
+
+print(a)
+print(b)
+print(c)
