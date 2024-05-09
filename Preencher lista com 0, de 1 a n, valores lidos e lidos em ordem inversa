@@ -1,0 +1,33 @@
+# Escreva um programa que leia um número n. Considere uma lista com n posições, e então: 
+# a) preencha com 0 (zero) e imprima a lista; 
+# b) preencha com os números de 1 a n e imprima a lista; 
+# c) preencha com valores lidos pelo teclado e imprima a lista; 
+# d) preencha na ordem inversa com valores lidos pelo teclado e imprima a lista; 
+# dica: use insert para sempre incluir os elementos no início da lista;
+
+x = int(input())
+lista = []
+lista2 = []
+lista3 = []
+lista4 = []
+k = 1
+
+for i in range(x):
+    lista.append(0)
+
+while k <= x:
+    k += 1
+    lista2.append(k-1)
+
+for i in range(x):
+    num = int(input())
+    lista3.append(num)
+
+for i in range(x):
+    num = int(input())
+    lista4.insert(0,num)
+
+print(lista)
+print(lista2)
+print(lista3)
+print(lista4)
