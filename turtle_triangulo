@@ -1,0 +1,12 @@
+from turtle import*
+
+shape("classic")
+speed(5)
+
+color("Red")
+pensize(1)
+forward(150)
+right(50)
+backward(120)
+left(100)
+backward(115)
