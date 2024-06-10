@@ -1,3 +1,11 @@
+# Reescreva as classes referentes ao exercício de Herança com a seguinte modificação: 
+# Na classe ContaCorrente, acrescente um método sacar(self,valor). Este método debita o valor que foi passado no argumento do saldo da conta e cobra R$ 2,00 por cada saque efetuado. Ex: conta.sacar(20) vai debitar R$ 22,00 da conta. 
+# Na classe ContaPoupança que é filha de ContaCorrente, reescreva o método sacar(self,valor). Este método cobra R$ 0,50 para cada saque efetuado a partir do 5º saque. Ou seja, Toda instancia de ContaPoupanca pode efetuar 4 saques sem cobrança de tarifa. A partir do 5º saque, é debitado o valor do saque mais R$ 0,50. 
+# Escreva uma classe Banco que faz uma associação 1:N com ContaCorrente. Nesta classe, crie um método polimórfico adicionar_conta, que é responsável por adicionar uma instancia de ContaCorrente ou ContaPoupança na lista de contas desta classe.
+# Crie um outro método polimórfico Sacar(self,conta). Este método vai chamar o método sacar respectivo do objeto que foi passado no argumento. 
+# Na execução, crie objetos para representar contas e banco e  teste os métodos polimórficos.
+
+
 class ContaCorrente:
     def __init__(self, numero, saldo=0):
         self.numero = numero
